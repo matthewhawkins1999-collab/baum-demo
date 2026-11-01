@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Baum Plumbing & Water Treatment — Website Assistant Demo</title><meta name="robots" content="noindex">
+<style>
+:root{--red:#c62026;--dk:#1d2430;--bg:#f5f6f8;--mut:#667085}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--dk)}
+.banner{background:#fff3cd;color:#6b4e00;font-size:12px;text-align:center;padding:6px 10px;border-bottom:1px solid #f0d98a}
+header{background:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 4px #0001;position:sticky;top:0;z-index:5}
+.logo{font-weight:800;font-size:18px;line-height:1.1}.logo span{color:var(--red)}.logo small{display:block;font-weight:500;font-size:11px;color:var(--mut)}
+.callbtn{background:var(--red);color:#fff;text-decoration:none;padding:9px 12px;border-radius:8px;font-weight:700;font-size:14px}
+.hero{background:linear-gradient(135deg,#1d2430,#3a4658);color:#fff;padding:32px 18px}
+.hero h1{margin:0 0 8px;font-size:26px}.hero p{margin:0;opacity:.9}
+.pill{display:inline-block;margin-top:14px;background:#ffffff1f;padding:6px 10px;border-radius:20px;font-size:13px}
+section{padding:20px 16px}h2{font-size:19px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{background:#fff;border-radius:10px;padding:12px;font-size:14px;box-shadow:0 1px 3px #0001}
+.info{background:#fff;border-radius:10px;padding:14px;line-height:1.6;font-size:15px}
+footer{text-align:center;font-size:11px;color:var(--mut);padding:20px 16px 110px}
+#fab{position:fixed;right:16px;bottom:16px;background:var(--red);color:#fff;border:0;border-radius:30px;padding:14px 18px;font-weight:700;font-size:15px;box-shadow:0 4px 14px #0004;z-index:20}
+#chat{position:fixed;inset:0;background:#fff;display:none;flex-direction:column;z-index:30}
+@media(min-width:600px){#chat{inset:auto 16px 16px auto;width:380px;height:620px;border-radius:14px;box-shadow:0 8px 30px #0005;overflow:hidden}}
+.ch{background:var(--red);color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}
+.ch b{display:block}.ch small{opacity:.9;font-size:12px}.x{background:none;border:0;color:#fff;font-size:26px}
+#msgs{flex:1;overflow-y:auto;padding:12px;background:var(--bg)}
+.m{max-width:85%;padding:9px 12px;border-radius:14px;margin:6px 0;font-size:15px;line-height:1.4;white-space:pre-line}
+.bot{background:#fff;box-shadow:0 1px 2px #0001}.me{background:var(--dk);color:#fff;margin-left:auto}
+.alert{background:#fde8e8;border:1px solid #f5b5b5}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;border-top:1px solid #eee}
+.chips button{flex:none;border:1px solid #ddd;background:#fff;border-radius:16px;padding:7px 11px;font-size:13px}
+form.in{display:flex;gap:6px;padding:10px;border-top:1px solid #eee}form.in input{flex:1;padding:11px;border:1px solid #ccc;border-radius:20px;font-size:16px}
+form.in button{background:var(--red);color:#fff;border:0;border-radius:20px;padding:0 16px;font-weight:700}
+.cb{background:#fff;border-radius:12px;padding:12px;margin:6px 0;box-shadow:0 1px 3px #0002}
+.cb input,.cb select,.cb textarea{width:100%;margin:4px 0 8px;padding:9px;border:1px solid #ccc;border-radius:8px;font-size:16px;font-family:inherit}
+.cb button{width:100%;background:var(--red);color:#fff;border:0;border-radius:8px;padding:11px;font-weight:700}
+.tag{font-size:10px;color:var(--mut);text-align:center;padding:4px}
+#ownerBtn{position:fixed;left:12px;bottom:16px;z-index:20;background:#fff;border:1px solid #ccc;border-radius:20px;padding:8px 12px;font-size:12px;color:var(--dk)}
+#owner{position:fixed;inset:0;background:#fff;z-index:40;display:none;overflow-y:auto;padding:16px}
+.lead{border:1px solid #e3e3e3;border-radius:10px;padding:10px;margin:8px 0;font-size:14px}.lead b{display:block}
+.badge{font-size:11px;padding:2px 7px;border-radius:10px;background:#eef;margin-left:4px}.new{background:#e6f7ea;color:#126b2b}.urg{background:#fde8e8;color:#a11}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}.stats div{background:var(--bg);border-radius:8px;padding:10px;text-align:center;font-size:12px}.stats b{display:block;font-size:20px}
+</style></head><body>
+<div class="banner">Demo concept only. Not the official Baum website and not affiliated with Baum Plumbing &amp; Water Treatment.</div>
+<header><div class="logo">BAUM <span>Plumbing</span><small>&amp; Water Treatment · Canton, OH</small></div><a class="callbtn" href="tel:+13304563466">Call</a></header>
+<div class="hero"><h1>Canton's full-service plumber</h1><p>Repair and installation for homes and businesses, plus water softeners, water treatment, and a full plumbing store.</p><div class="pill">💬 Questions? Get answers 24/7, even after we close</div></div>
+<section><h2>Residential services</h2><div class="grid">
+<div class="card">🚿 Clogged drains &amp; sewers</div><div class="card">💧 Water softeners &amp; treatment</div><div class="card">🔥 Hot water tanks</div><div class="card">🚰 Faucet repair &amp; install</div><div class="card">🚽 Toilet repair &amp; install</div><div class="card">🔧 Gas &amp; water lines</div><div class="card">🛡️ Backflow testing</div><div class="card">🔌 Appliance hook-up</div><div class="card">🏠 Plumbing for remodels</div><div class="card">🏢 Commercial service</div></div></section>
+<section><h2>Visit us</h2><div class="info">📍 1012 Tuscarawas St W, Canton, OH 44702<br>📞 <a href="tel:+13304563466">(330) 456-3466</a><br>🕘 Mon–Fri 9:00 AM – 4:30 PM · Closed Sat &amp; Sun<br>🧪 Bring a water sample to our store for testing</div></section>
+<footer>Mock-up for demonstration. Business details from Baum's public website.<br>Demo by The Local AI Guy</footer>
+<button id="ownerBtn" onclick="tog('owner',1)">👤 Owner view</button>
+<button id="fab" onclick="openChat()">💬 Ask us anything</button>
+<div id="chat"><div class="ch"><div><b>Baum Plumbing Assistant</b><small>Answers 24/7 · a real person follows up</small></div><button class="x" onclick="tog('chat',0)">×</button></div>
+<div id="msgs"></div>
+<div class="chips" id="chips"></div>
+<form class="in" onsubmit="send(event)"><input id="q" placeholder="Type your question…" autocomplete="off"><button>Send</button></form>
+<div class="tag">Demo by The Local AI Guy · scripted sample answers</div></div>
+<div id="owner"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Owner view</h2><button class="x" style="color:#333" onclick="tog('owner',0)">×</button></div>
+<p style="font-size:12px;background:#fff3cd;padding:8px;border-radius:8px">SAMPLE DATA. These are made-up example leads to show what you'd see each morning. Not real customers.</p>
+<div class="stats"><div><b id="sc">5</b>Callback requests</div><div><b>3</b>After hours</div><div><b>18</b>Questions answered</div></div>
+<div id="leads"></div><p style="font-size:12px;color:#667085">Each new request could also be sent to the shop by text or email. Leads from this demo's form appear here on this device only. Nothing is sent anywhere.</p></div>
+<script>
+const P='(330) 456-3466',PL='<a href="tel:+13304563466">'+P+'</a>';
+const sample=[
+{n:'Linda R. (sample)',t:'Sat 8:42 PM',w:'Water softener stopped regenerating, hard water spots. Wants a repair visit.',p:'330-555-0142',u:0},
+{n:'Dave K. (sample)',t:'Sun 7:15 AM',w:'Basement floor drain backing up. Asked for a callback first thing Monday.',p:'330-555-0187',u:1},
+{n:'Maria S. (sample)',t:'Fri 6:05 PM',w:'Quote for replacing a 40-gal hot water tank.',p:'330-555-0119',u:0},
+{n:'Corner Café (sample)',t:'Thu 2:30 PM',w:'Commercial: slow kitchen drain, wants a scheduled visit.',p:'330-555-0164',u:0},
+{n:'Tom B. (sample)',t:'Wed 9:50 PM',w:'Well water smells. Asked about water testing; told to bring a sample to the store.',p:'330-555-0103',u:0}];
+let leads=[];
+function renderLeads(){const all=leads.concat(sample);document.getElementById('sc').textContent=all.length;
+document.getElementById('leads').innerHTML=all.map(l=>`<div class="lead"><b>${esc(l.n)} <span class="badge ${l.d?'new':''} ${l.u?'urg':''}">${l.d?'NEW · from this demo':l.u?'Urgent':'Callback'}</span></b><span style="color:#667085">${esc(l.t)} · ${esc(l.p)}</span><br>${esc(l.w)}</div>`).join('')}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function tog(id,on){document.getElementById(id).style.display=on?(id=='chat'?'flex':'block'):'none';if(id=='owner'&&on)renderLeads()}
+const M=document.getElementById('msgs');
+function add(h,c){const d=document.createElement('div');d.className='m '+c;d.innerHTML=h;M.appendChild(d);M.scrollTop=M.scrollHeight;return d}
+function bot(h,cls){setTimeout(()=>add(h,'bot '+(cls||'')),350)}
+function openChat(){tog('chat',1);if(!M.children.length){bot("Hi! I'm Baum's website assistant. I can answer questions about our hours, location, services, and water treatment, or take a callback request any time, day or night. How can I help?");chips()}}
+const CH=['Are you open now?','Where are you?','What services do you offer?','Water softener help','Can you test my water?','I have an emergency','Book a service','I smell gas'];
+function chips(){document.getElementById('chips').innerHTML=CH.map(c=>`<button onclick="ask('${c}')">${c}</button>`).join('')}
+function openNow(){const d=new Date(),day=d.getDay(),m=d.getHours()*60+d.getMinutes();return day>=1&&day<=5&&m>=540&&m<990}
+const R=[
+{k:/gas (smell|leak)|smell(s|ing)? (gas|like gas)|rotten egg/,a:()=>(["<b>If you smell gas, leave the building now.</b> Don't use switches, phones, or anything that could spark while you're inside. Once you're safely outside, call 911 or your gas utility's emergency line.\n\nAfter it's been made safe, Baum can help with gas line repairs: "+PL,'alert'])},
+{k:/emergenc|urgent|flood|burst|leak|after.?hours|overflow|no water|backing up|backed up|sewage/,a:()=>[(openNow()?"We're open right now. For anything urgent, the fastest way is to call the shop: "+PL+".\n\nOr leave your details and we'll call you back.":"We're closed right now (Mon–Fri 9:00–4:30), but I can make sure the team sees this first thing. If water is actively leaking, shut off the main water valve if you can.\n\nLeave your details below and we'll call you back as soon as we open.")+"\n\nIf there's any danger to people, call 911.",'',1]},
+{k:/book|appointment|schedul|estimate|quote|come out|send someone|visit|technician|price|cost|how much/,a:()=>["Happy to set that up! Our team schedules visits and gives pricing directly, so leave a few details and someone will call you back"+(openNow()?" shortly.":" when we open (Mon–Fri 9:00–4:30)."),'',1]},
+{k:/open|hours|close|when|today|weekend|saturday|sunday/,a:()=>["We're open <b>Monday–Friday, 9:00 AM – 4:30 PM</b>, and closed Saturday and Sunday.\n\n"+(openNow()?"✅ We're open right now. Call "+PL+".":"We're closed right now, but I can take a callback request and the team will reach out when we open.")]},
+{k:/where|address|locat|direction|find you|store|parking/,a:()=>["We're at <b>1012 Tuscarawas St W, Canton, OH 44702</b>. Our plumbing store is there too.\n\n<a target=_blank href='https://maps.google.com/?q=1012+Tuscarawas+St+W+Canton+OH+44702'>Open in Maps</a> · "+PL]},
+{k:/test|sample|iron|hard(ness)?|ph\b|well water|coliform|quality|smell|odor|taste/,a:()=>["Yes! <b>Bring a water sample to our plumbing store</b> and we'll test it. We check iron content, hardness, and pH, plus other quality indicators like total coliforms and volatile organic compounds.\n\nWorks for both well water and city water. Store hours: Mon–Fri 9:00–4:30."]},
+{k:/soft|treat|filter|hard water|regenerat|salt/,a:()=>["Baum does full service, sales, and installation of <b>water softeners and water treatment systems</b>. That includes repairing your existing softener or filtration system, or installing a new or replacement system that fits your home.\n\nWant someone to call you about it? Tap below.",'',1]},
+{k:/service|offer|do you|what can|fix|repair|install/,a:()=>["We handle:\n• Clogged drains & sewers\n• Water softeners & water treatment\n• Hot water tanks\n• Faucet and toilet repair & installation\n• Gas line & water line services\n• Backflow preventer testing & installation\n• Appliance hook-up\n• Plumbing for remodels\n• Commercial plumbing & drain clearing\n\nWhat do you need help with?"]},
+{k:/drain|clog|sewer|toilet|faucet|drip/,a:()=>["Yes, we clear clogged drains and sewers and repair or install faucets and toilets for homes and businesses. Want a callback to set up a visit?",'',1]},
+{k:/water heater|hot water|tank|tankless/,a:()=>["Yes, we service and install hot water tanks. Want someone to call you about yours?",'',1]},
+{k:/backflow/,a:()=>["Yes, we do backflow preventer testing and installation. Want a callback?",'',1]},
+{k:/commercial|business|restaurant|retail/,a:()=>["Yes, we provide repair and drain clearing services for commercial and retail businesses. Want a callback?",'',1]},
+{k:/area|canton|massillon|north canton|stark|serve/,a:()=>["We serve the Canton area, including Canton, North Canton, and Massillon. Not sure if we cover you? Leave a callback and we'll let you know.",'',1]},
+{k:/phone|call|number|talk|person|human/,a:()=>["You can reach the shop at "+PL+" (Mon–Fri 9:00–4:30). Or leave your number and a real person will call you back.",'',1]},
+{k:/hi|hello|hey|thanks|thank/,a:()=>["Glad to help! Ask me about hours, services, water testing, or tap a button below."]}];
+function ask(t){add(esc(t),'me');const s=t.toLowerCase();const r=R.find(x=>x.k.test(s));
+if(r){const [h,c,f]=r.a();bot(h,c);if(f)setTimeout(form,500)}else{bot("Good question. I want to make sure you get the right answer, so let me have someone from the team call you back. You can also call "+PL+".");setTimeout(form,500)}}
+function send(e){e.preventDefault();const q=document.getElementById('q');if(q.value.trim()){ask(q.value.trim());q.value=''}}
+function form(){const d=document.createElement('div');d.className='cb';d.innerHTML=`<b>Request a callback</b><input placeholder="Your name" required name=n><input placeholder="Phone number" type=tel required name=p><textarea rows=2 placeholder="What's going on?" name=w></textarea><select name=u><option value=0>Not urgent</option><option value=1>Urgent</option></select><button>Request callback</button><div class=tag>Demo: nothing is sent</div>`;
+const f=document.createElement('form');f.appendChild(d);f.onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(f));leads.unshift({n:v.n,p:v.p,w:v.w||'(no details)',u:v.u=='1',d:1,t:'Just now'});f.remove();
+add("✅ Thanks, "+esc(v.n)+"! Your callback request is in. "+(openNow()?"The team will call you shortly.":"The team will call "+esc(v.p)+" when we open (Mon–Fri 9:00–4:30).")+"\n\n<small style='color:#667085'>(Demo only: nothing was actually sent. Tap Owner view to see how it shows up.)</small>",'bot')};
+M.appendChild(f);M.scrollTop=M.scrollHeight}
+</script></body></html>
