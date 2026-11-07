@@ -1,0 +1,9 @@
+Pre-publish backup of the GitHub Pages site.
+
+Restores: scripted-only index.html from commit 1183ce3fc8a383a92f9446d7d0ad3f4a26530b2f
+Tag: backup/pre-reviewed-publish-2026-11-07
+File SHA-256: 123ee13f632ea42236da916ecbead12eab193982e1bf4f5e0af0b30ce50042e1
+
+This folder is not published (Jekyll skips directories whose names start with an underscore, and _config.yml excludes _backup).
+
+Full rollback steps are in REVIEW-NOTES.md. Do not force-push main.
