@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) publishes this repo from main.
+# Internal notes stay in git and are not site content.
+exclude:
+  - REVIEW-NOTES.md
+  - _backup
